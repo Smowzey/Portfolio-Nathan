@@ -79,14 +79,9 @@
     <!-- Google Tag Manager : chargé uniquement après consentement (voir js/cookies.js) -->
 </head>
 <body>
-    <!-- CUSTOM CURSOR -->
+    <!-- CUSTOM CURSOR (desktop only — masqué via CSS sur mobile) -->
     <div class="cursor-dot" id="cursor-dot"></div>
     <div class="cursor-outline" id="cursor-outline"></div>
-
-    <!-- LOADER -->
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
 
     <!-- SECTION 1 — NAVIGATION -->
     <header id="navbar">
@@ -128,13 +123,13 @@
             <div class="shape shape-2"></div>
         </div>
         <div class="container hero-content">
-            <p class="greeting reveal">Bonjour, je suis</p>
-            <h1 class="hero-name reveal delay-1">Nathan Code</h1>
-            <h2 class="hero-title reveal delay-2">
+            <p class="greeting">Bonjour, je suis</p>
+            <h1 class="hero-name">Nathan Code</h1>
+            <h2 class="hero-title">
                 <span id="typewriter"></span><span class="cursor">|</span>
             </h2>
-            <p class="hero-hook reveal delay-3">Transformant vos idées en expériences digitales mémorables et performantes.</p>
-            <div class="hero-buttons reveal delay-4">
+            <p class="hero-hook">Transformant vos idées en expériences digitales mémorables et performantes.</p>
+            <div class="hero-buttons">
                 <a href="Analyse.html" class="btn btn-primary btn-pulse"><i class="fa-solid fa-magnifying-glass-chart"></i> Faire analyser mon site</a>
                 <a href="#works" class="btn btn-outline">Voir mes réalisations</a>
             </div>
@@ -151,7 +146,11 @@
             <div class="about-grid">
                 <div class="about-image-wrapper reveal">
                     <div class="image-border-anim"></div>
-                    <img src="images/profil.webp" alt="Baudson Nathan" class="about-image" loading="lazy" decoding="async" width="500" height="500">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="images/profil-mobile.webp" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="images/profil-md.webp" type="image/webp">
+                        <img src="images/profil.webp" alt="Baudson Nathan" class="about-image" loading="lazy" decoding="async" width="500" height="667">
+                    </picture>
                 </div>
                 <div class="about-text reveal delay-1">
                     <h3>Qui suis-je ?</h3>
