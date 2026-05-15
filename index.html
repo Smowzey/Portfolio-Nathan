@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nathan Code | Développeur Web Freelance à Liège</title>
+    <meta name="description" content="Nathan Code, studio de développement web freelance à Liège dirigé par Baudson Nathan. Création de sites vitrines, e-commerce et applications web sur mesure.">
+    <meta name="author" content="Nathan Code — Baudson Nathan">
+
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="U-JfkJKRaE6w7EcaBznw0P7YmtVjx_ysadhsGkfKK20" />
+
+    <!-- SEO & Open Graph -->
+    <link rel="canonical" href="https://nathan-code.be/">
+    <meta property="og:site_name" content="Nathan Code">
+    <meta property="og:title" content="Nathan Code | Développeur Web Freelance à Liège">
+    <meta property="og:description" content="Nathan Code — création de sites web modernes, rapides et optimisés. Demandez votre devis ou analysez votre site gratuitement.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nathan-code.be/">
+    <meta property="og:image" content="https://nathan-code.be/images/Logotittle.webp">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Données structurées JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Baudson Nathan",
+      "alternateName": "Nathan Code",
+      "brand": {
+        "@type": "Brand",
+        "name": "Nathan Code"
+      },
+      "jobTitle": "Développeur Web Freelance",
+      "description": "Développeur web freelance spécialisé dans la création de sites performants, rapides et optimisés pour la conversion et le référencement (SEO & IA).",
+      "url": "https://nathan-code.be/",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Liège",
+        "addressCountry": "BE"
+      },
+      "knowsAbout": [
+        "Développement Web", "SEO", "Optimisation IA", "Création de site internet", "Python", "JavaScript"
+      ],
+      "sameAs": [
+        "https://github.com/Smowzey",
+        "https://www.instagram.com/smowzey/",
+        "https://www.facebook.com/NathanBaudson.code"
+      ]
+    }
+    </script>
+    
+    <!-- Favicon (Image de l'onglet) -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/logo.webp">
+
+    <!-- Fonts: Poppins for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Tag Manager : chargé uniquement après consentement (voir js/cookies.js) -->
+</head>
+<body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- SECTION 1 — NAVIGATION -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <img src="images/logo.webp" alt="Logo Baudson Nathan" class="logo-img">
+            </a>
+            
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active">Accueil</a></li>
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#works" class="nav-link">Réalisations</a></li>
+                    <li><a href="#pricing" class="nav-link">Formules</a></li>
+                    <li><a href="#inspirations" class="nav-link">Inspirations</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="Analyse.html" class="btn btn-primary btn-pulse" style="padding: 8px 18px; font-size: 0.9rem;"><i class="fa-solid fa-robot"></i> Audit IA Gratuit</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 2 — HERO -->
+    <section id="home" class="hero">
+        <div class="bg-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+        </div>
+        <div class="container hero-content">
+            <p class="greeting reveal">Bonjour, je suis</p>
+            <h1 class="hero-name reveal delay-1">Nathan Code</h1>
+            <h2 class="hero-title reveal delay-2">
+                <span id="typewriter"></span><span class="cursor">|</span>
+            </h2>
+            <p class="hero-hook reveal delay-3">Transformant vos idées en expériences digitales mémorables et performantes.</p>
+            <div class="hero-buttons reveal delay-4">
+                <a href="Analyse.html" class="btn btn-primary btn-pulse"><i class="fa-solid fa-magnifying-glass-chart"></i> Faire analyser mon site</a>
+                <a href="#works" class="btn btn-outline">Voir mes réalisations</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+    </section>
+
+    <!-- SECTION 3 — À PROPOS -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">À propos de moi</h2>
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal">
+                    <div class="image-border-anim"></div>
+                    <img src="images/profil.webp" alt="Baudson Nathan" class="about-image" loading="lazy">
+                </div>
+                <div class="about-text reveal delay-1">
+                    <h3>Qui suis-je ?</h3>
+                    <p class="bio">Salut ! Moi c'est Baudson Nathan, un passionné du développement web basé à Liège, Belgique. Je crée des sites web sur mesure, adaptés à votre image.<br><br>J'utilise les derniers outils du web pour vous offrir le meilleur résultat. Rapide, soigné, personnalisé — des sites modernes et efficaces, livrés en quelques jours seulement (généralement 3 à 5 jours).</p>
+                    
+                    <div class="skills-container">
+                        <h4>Compétences techniques</h4>
+                        <div class="soft-skills">
+                            <span class="tag">VS Code</span>
+                            <span class="tag">GitHub</span>
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JS</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-container mt-4">
+                        <h4>Soft skills</h4>
+                        <div class="soft-skills">
+                            <span class="tag">Créativité</span>
+                            <span class="tag">Résolution de problèmes</span>
+                            <span class="tag">Travail en équipe</span>
+                            <span class="tag">Autonomie</span>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links mt-4">
+                        <a href="https://github.com/Smowzey" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.instagram.com/smowzey/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/NathanBaudson.code" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4 — TRAVAUX -->
+    <section id="works" class="section bg-secondary">
+        <div class="container">
+            <h2 class="section-title reveal">Mes Réalisations</h2>
+            
+            <div class="filters reveal delay-1">
+                <button class="filter-btn active" data-filter="all">Tout</button>
+                <button class="filter-btn" data-filter="Site Web">Site Web</button>
+                <button class="filter-btn" data-filter="Logiciel">Logiciel</button>
+            </div>
+
+            <!-- Rempli par JavaScript -->
+            <div class="portfolio-grid" id="portfolio-grid"></div>
+        </div>
+    </section>
+
+    <!-- SECTION 5 — FORMULES -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Mes Formules</h2>
+            <p class="section-subtitle reveal delay-1">Quatre formules claires, du site one-page au projet sur-mesure. Toutes incluent design responsive, SEO de base et formulaire de contact.</p>
+
+            <div class="pricing-grid pricing-grid-4">
+
+                <article class="pricing-card reveal">
+                    <div class="plan-icon">🚀</div>
+                    <h3 class="plan-name">Landing</h3>
+                    <p class="plan-target">Indépendant, lancement de produit, événement</p>
+                    <div class="plan-price">890€<span></span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-file"></i> 1 page responsive premium</li>
+                        <li><i class="fa-solid fa-palette"></i> Design personnalisé</li>
+                        <li><i class="fa-solid fa-envelope"></i> Formulaire de contact</li>
+                        <li><i class="fa-solid fa-magnifying-glass"></i> SEO de base + sitemap</li>
+                        <li><i class="fa-solid fa-wand-magic-sparkles"></i> Animations légères au scroll</li>
+                        <li><i class="fa-solid fa-bolt"></i> Livraison 3 à 5 jours</li>
+                        <li><i class="fa-solid fa-rotate"></i> 2 allers-retours inclus</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline w-100 formula-btn" data-formula="Landing — 890€">Choisir cette formule</a>
+                </article>
+
+                <article class="pricing-card popular reveal delay-1">
+                    <div class="popular-badge">🌟 Le plus choisi</div>
+                    <div class="plan-icon">🌱</div>
+                    <h3 class="plan-name">Vitrine</h3>
+                    <p class="plan-target">Artisan, restaurant, cabinet, TPE, commerce local</p>
+                    <div class="plan-price">1 690€<span></span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check-double"></i> <b>Tout Landing inclus</b></li>
+                        <li><i class="fa-solid fa-layer-group"></i> Jusqu'à 5 pages</li>
+                        <li><i class="fa-solid fa-bars"></i> Navigation structurée</li>
+                        <li><i class="fa-solid fa-map-location-dot"></i> Contact + carte + horaires</li>
+                        <li><i class="fa-solid fa-puzzle-piece"></i> Intégrations standards<small class="feat-sub">(Maps, réseaux sociaux, vidéos)</small></li>
+                        <li><i class="fa-solid fa-location-crosshairs"></i> SEO local optimisé</li>
+                        <li><i class="fa-solid fa-graduation-cap"></i> Formation 1h en visio</li>
+                        <li><i class="fa-solid fa-clock"></i> Livraison 7 à 10 jours</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary w-100 formula-btn" data-formula="Vitrine — 1 690€">Choisir cette formule</a>
+                </article>
+
+                <article class="pricing-card reveal delay-2">
+                    <div class="plan-icon">💼</div>
+                    <h3 class="plan-name">Site Pro</h3>
+                    <p class="plan-target">PME, plusieurs services, besoin éditorial régulier</p>
+                    <div class="plan-price">2 790€<span></span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-check-double"></i> <b>Tout Vitrine inclus</b></li>
+                        <li><i class="fa-solid fa-layer-group"></i> Jusqu'à 10 pages</li>
+                        <li><i class="fa-solid fa-newspaper"></i> Module Blog / Actualités</li>
+                        <li><i class="fa-solid fa-chart-line"></i> Stratégie SEO complète</li>
+                        <li><i class="fa-solid fa-gauge-high"></i> Core Web Vitals optimisés</li>
+                        <li><i class="fa-solid fa-graduation-cap"></i> Formation 2h en visio</li>
+                        <li><i class="fa-solid fa-clock"></i> Livraison 2 à 3 semaines</li>
+                        <li><i class="fa-solid fa-rotate"></i> 3 allers-retours inclus</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline w-100 formula-btn" data-formula="Site Pro — 2 790€">Choisir cette formule</a>
+                </article>
+
+                <article class="pricing-card reveal delay-3">
+                    <div class="plan-icon">🎯</div>
+                    <h3 class="plan-name">Sur-mesure</h3>
+                    <p class="plan-target">E-commerce, espace membre, dashboard, app métier</p>
+                    <div class="plan-price">dès 4 900€<span></span></div>
+                    <ul class="plan-features">
+                        <li><i class="fa-solid fa-infinity"></i> Pages illimitées</li>
+                        <li><i class="fa-solid fa-cart-shopping"></i> E-commerce, paiement en ligne</li>
+                        <li><i class="fa-solid fa-user-shield"></i> Espace admin sur-mesure</li>
+                        <li><i class="fa-solid fa-user-lock"></i> Espace client / membre</li>
+                        <li><i class="fa-solid fa-link"></i> Intégration API & BDD</li>
+                        <li><i class="fa-solid fa-language"></i> Multilingue natif</li>
+                        <li><i class="fa-solid fa-bullseye"></i> Stratégie UX/UI dédiée</li>
+                        <li><i class="fa-solid fa-file-contract"></i> Audit & cahier des charges</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline w-100 formula-btn" data-formula="Sur-mesure — dès 4 900€">Demander un devis</a>
+                </article>
+
+            </div>
+
+            <!-- TABLEAU COMPARATIF -->
+            <div class="compare-wrapper reveal">
+                <h3 class="compare-title">Tableau comparatif</h3>
+                <div class="compare-scroll">
+                    <table class="compare-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Landing</th>
+                                <th class="th-highlight">Vitrine ⭐</th>
+                                <th>Site Pro</th>
+                                <th>Sur-mesure</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><th>Prix</th><td data-label="Landing">890€</td><td class="td-highlight" data-label="Vitrine ⭐">1 690€</td><td data-label="Site Pro">2 790€</td><td data-label="Sur-mesure">dès 4 900€</td></tr>
+                            <tr><th>Pages incluses</th><td data-label="Landing">1 page</td><td class="td-highlight" data-label="Vitrine ⭐">Jusqu'à 5</td><td data-label="Site Pro">Jusqu'à 10</td><td data-label="Sur-mesure">Illimité</td></tr>
+                            <tr><th>Délai</th><td data-label="Landing">3-5 jours</td><td class="td-highlight" data-label="Vitrine ⭐">7-10 jours</td><td data-label="Site Pro">2-3 semaines</td><td data-label="Sur-mesure">Sur planning</td></tr>
+                            <tr><th>Design responsive</th><td data-label="Landing"><i class="fa-solid fa-check ok"></i></td><td class="td-highlight" data-label="Vitrine ⭐"><i class="fa-solid fa-check ok"></i></td><td data-label="Site Pro"><i class="fa-solid fa-check ok"></i></td><td data-label="Sur-mesure"><i class="fa-solid fa-check ok"></i></td></tr>
+                            <tr><th>SEO de base</th><td data-label="Landing"><i class="fa-solid fa-check ok"></i></td><td class="td-highlight" data-label="Vitrine ⭐"><i class="fa-solid fa-check ok"></i></td><td data-label="Site Pro"><i class="fa-solid fa-check ok"></i></td><td data-label="Sur-mesure"><i class="fa-solid fa-check ok"></i></td></tr>
+                            <tr><th>Formulaire de contact</th><td data-label="Landing"><i class="fa-solid fa-check ok"></i></td><td class="td-highlight" data-label="Vitrine ⭐"><i class="fa-solid fa-check ok"></i></td><td data-label="Site Pro"><i class="fa-solid fa-check ok"></i></td><td data-label="Sur-mesure"><i class="fa-solid fa-check ok"></i></td></tr>
+                            <tr><th>Intégrations standards<br><small class="th-sub">(Maps, réseaux sociaux, vidéos)</small></th><td data-label="Landing"><i class="fa-solid fa-minus ko"></i></td><td class="td-highlight" data-label="Vitrine ⭐"><i class="fa-solid fa-check ok"></i></td><td data-label="Site Pro"><i class="fa-solid fa-check ok"></i></td><td data-label="Sur-mesure"><i class="fa-solid fa-check ok"></i></td></tr>
+                            <tr><th>Blog / actualités</th><td data-label="Landing"><i class="fa-solid fa-minus ko"></i></td><td class="td-highlight" data-label="Vitrine ⭐"><i class="fa-solid fa-minus ko"></i></td><td data-label="Site Pro"><i class="fa-solid fa-check ok"></i></td><td data-label="Sur-mesure"><i class="fa-solid fa-check ok"></i></td></tr>
+                            <tr><th>Espace admin</th><td data-label="Landing"><i class="fa-solid fa-minus ko"></i></td><td class="td-highlight" data-label="Vitrine ⭐"><i class="fa-solid fa-minus ko"></i></td><td data-label="Site Pro"><i class="fa-solid fa-minus ko"></i></td><td data-label="Sur-mesure">Sur-mesure</td></tr>
+                            <tr><th>Multilingue</th><td data-label="Landing"><i class="fa-solid fa-minus ko"></i></td><td class="td-highlight" data-label="Vitrine ⭐">Option</td><td data-label="Site Pro">Option</td><td data-label="Sur-mesure"><i class="fa-solid fa-check ok"></i></td></tr>
+                            <tr><th>Formation</th><td data-label="Landing"><i class="fa-solid fa-minus ko"></i></td><td class="td-highlight" data-label="Vitrine ⭐">1h</td><td data-label="Site Pro">2h</td><td data-label="Sur-mesure">Sur-mesure</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- OPTIONS / ADD-ONS -->
+            <div class="addons-wrapper reveal">
+                <h3 class="compare-title">Options & add-ons</h3>
+                <p class="addons-intro">À ajouter à n'importe quelle formule selon vos besoins.</p>
+                <div class="addons-grid">
+                    <div class="addon-item"><span class="addon-label"><i class="fa-solid fa-file-circle-plus"></i> Page supplémentaire</span><span class="addon-price">180€<small>/page</small></span></div>
+                    <div class="addon-item"><span class="addon-label"><i class="fa-solid fa-server"></i> Hébergement + nom de domaine</span><span class="addon-price addon-price-text">Varie selon vos besoins</span></div>
+                    <div class="addon-item"><span class="addon-label"><i class="fa-solid fa-pen-nib"></i> Rédaction de contenu</span><span class="addon-price">90€<small>/page</small></span></div>
+                    <div class="addon-item"><span class="addon-label"><i class="fa-solid fa-language"></i> Module multilingue</span><span class="addon-price">290€<small>/langue</small></span></div>
+                    <div class="addon-item"><span class="addon-label"><i class="fa-solid fa-calendar-check"></i> Système de réservation avancé</span><span class="addon-price">390€</span></div>
+                    <div class="addon-item"><span class="addon-label"><i class="fa-solid fa-rotate"></i> Aller-retour de révisions sup.</span><span class="addon-price">90€</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6 — INSPIRATIONS -->
+    <section id="inspirations" class="section bg-secondary overflow-hidden">
+        <div class="container">
+            <h2 class="section-title reveal">Inspirations</h2>
+        </div>
+        <div class="scrolling-wrapper reveal delay-1">
+            <div class="scrolling-content">
+                <!-- Première série d'images -->
+                <div class="scrolling-track">
+                    <img src="images/1.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/2.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/3.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/4.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                </div>
+                <!-- Deuxième série (Clone identique pour l'illusion d'infini) -->
+                <div class="scrolling-track">
+                    <img src="images/5.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/6.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/7.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/8.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                </div>
+                <!-- Troisième série (Assure la boucle sur les grands écrans) -->
+                <div class="scrolling-track">
+                    <img src="images/1.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/2.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/3.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/4.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                </div>
+                <!-- Quatrième série (Assure la boucle sur les grands écrans) -->
+                <div class="scrolling-track">
+                    <img src="images/5.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/6.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/7.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                    <img src="images/8.webp" alt="Inspiration" class="inspi-image" loading="lazy" width="350" height="250">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION FAQ — (Optimisé pour les moteurs d'IA) -->
+    <section id="faq" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Questions Fréquentes</h2>
+            <div class="faq-grid reveal delay-1" itemscope itemtype="https://schema.org/FAQPage">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-header">
+                        <h3 itemprop="name">Comment se déroule la création d'un site web avec vous ?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Le processus commence par un audit complet de vos besoins. Ensuite, je conçois une interface sur mesure (UI/UX). Une fois validée, je développe le site avec un code propre, performant et optimisé pour le référencement (SEO & IA), avant une mise en ligne ultra-rapide.</p>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <div class="faq-header">
+                        <h3 itemprop="name">Pourquoi faire appel à un développeur freelance plutôt qu'à une agence ?</h3>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-body" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Travailler avec un freelance vous garantit un interlocuteur unique, une grande flexibilité et réactivité, ainsi que des tarifs plus compétitifs (pas de frais d'agence) sans aucun compromis sur la qualité technique et l'accompagnement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION AVIS -->
+    <section id="avis" class="section bg-secondary">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title reveal">Votre avis compte</h2>
+            <p class="section-subtitle reveal delay-1" style="max-width: 600px; margin: 0 auto 30px;">
+                Vous avez apprécié notre collaboration ? Votre retour est très important pour moi ! N'hésitez pas à partager votre expérience pour aider d'autres professionnels à concrétiser leurs projets web.
+            </p>
+            <div class="reveal delay-2">
+                <a href="https://g.page/r/CX7FBpuCuSz0EBM/review" target="_blank" rel="noopener" class="btn btn-primary btn-pulse" style="padding: 12px 28px; font-size: 1.05rem;">
+                    <i class="fa-brands fa-google" style="margin-right: 8px;"></i> Laissez votre avis sur Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7 — CONTACT -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Contactez-moi</h2>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Discutons de votre projet</h3>
+                    <p>N'hésitez pas à me contacter pour toute demande de collaboration ou simplement pour échanger.</p>
+                    
+                    <div class="contact-details">
+                        <a href="mailto:Baudson.nathan@gmail.com" class="contact-item"><i class="fa-solid fa-envelope"></i> Baudson.nathan@gmail.com</a>
+                        <a href="tel:0467077149" class="contact-item"><i class="fa-solid fa-phone"></i> 0467077149</a>
+                        <span class="contact-item"><i class="fa-solid fa-location-dot"></i> Liège, Belgique</span>
+                    </div>
+                    
+                    <div class="social-links mt-4">
+                        <a href="https://www.instagram.com/smowzey/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/Smowzey" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.facebook.com/NathanBaudson.code" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+                
+                <form id="contact-form" class="contact-form reveal delay-1">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nom <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="jean@exemple.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="0467 00 00 00">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Formule <span class="required">*</span></label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Sélectionnez…</option>
+                                <option value="Landing — 890€">Landing — 890€</option>
+                                <option value="Vitrine — 1 690€">Vitrine — 1 690€</option>
+                                <option value="Site Pro — 2 790€">Site Pro — 2 790€</option>
+                                <option value="Sur-mesure — dès 4 900€">Sur-mesure — dès 4 900€</option>
+                                <option value="Autre demande">Autre demande</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="budget">Budget estimé</label>
+                            <select id="budget" name="budget">
+                                <option value="Non précisé" selected>Non précisé</option>
+                                <option value="< 1 000€">Moins de 1 000€</option>
+                                <option value="1 000€ – 2 000€">1 000€ – 2 000€</option>
+                                <option value="2 000€ – 4 000€">2 000€ – 4 000€</option>
+                                <option value="4 000€ – 7 000€">4 000€ – 7 000€</option>
+                                <option value="> 7 000€">Plus de 7 000€</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="delay">Délai souhaité</label>
+                            <select id="delay" name="delay">
+                                <option value="Flexible" selected>Flexible</option>
+                                <option value="Urgent (sous 1 semaine)">Urgent (sous 1 semaine)</option>
+                                <option value="Sous 2 à 3 semaines">Sous 2 à 3 semaines</option>
+                                <option value="Sous 1 à 2 mois">Sous 1 à 2 mois</option>
+                                <option value="Pas de date précise">Pas de date précise</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <fieldset class="form-group form-checkboxes">
+                        <legend>Options & add-ons souhaités</legend>
+                        <div class="checkbox-grid">
+                            <label class="check-item"><input type="checkbox" name="addons" value="Page supplémentaire (180€/page)"><span>Page supplémentaire</span></label>
+                            <label class="check-item"><input type="checkbox" name="addons" value="Hébergement + domaine"><span>Hébergement + domaine</span></label>
+                            <label class="check-item"><input type="checkbox" name="addons" value="Rédaction de contenu (90€/page)"><span>Rédaction de contenu</span></label>
+                            <label class="check-item"><input type="checkbox" name="addons" value="Module multilingue (290€/langue)"><span>Module multilingue</span></label>
+                            <label class="check-item"><input type="checkbox" name="addons" value="Système de réservation avancé (390€)"><span>Réservation avancée</span></label>
+                            <label class="check-item"><input type="checkbox" name="addons" value="Aller-retour de révisions sup. (90€)"><span>Révisions sup.</span></label>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="message">Votre message <span class="required">*</span></label>
+                        <textarea id="message" name="message" rows="5" placeholder="Parlez-moi de votre projet, vos objectifs, vos contraintes…" required></textarea>
+                    </div>
+
+                    <label class="check-item consent">
+                        <input type="checkbox" name="consent" value="oui" required>
+                        <span>J'accepte d'être recontacté concernant ma demande et que mes données soient traitées conformément à la <a href="confidentialite.html" target="_blank">politique de confidentialité</a>. <span class="required">*</span></span>
+                    </label>
+
+                    <button type="submit" class="btn btn-primary w-100" id="submit-btn">
+                        <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Envoyer ma demande</span>
+                        <span class="btn-loader"><i class="fa-solid fa-spinner fa-spin"></i></span>
+                    </button>
+                    <p class="form-note"><i class="fa-solid fa-lock"></i> Réponse sous 24h ouvrées · Vos données ne sont jamais partagées.</p>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 8 — FOOTER -->
+    <footer id="footer">
+        <div class="container footer-content">
+            <div class="footer-col footer-brand">
+                <img src="images/Nathan.code.webp" alt="Logo Baudson Nathan" class="footer-logo-img">
+                <p>Développeur Web passionné par la création digitale.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/smowzey/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Smowzey" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/NathanBaudson.code" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <div class="footer-links">
+                    <a href="#home">Accueil</a>
+                    <a href="#about">À propos</a>
+                    <a href="#works">Réalisations</a>
+                    <a href="Analyse.html">Analyse</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Légal</h4>
+                <div class="footer-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Confidentialité</a>
+                    <a href="cookies.html">Cookies</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Nathan Code. Tous droits réservés. — <a href="cgv.html" style="color:inherit;">Conditions Générales de Vente</a> — <a href="#" onclick="openCookieSettings();return false;" style="color:inherit;">Gérer les cookies</a></p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Retour en haut">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            // Remplacez par votre Clé Publique (Public Key) EmailJS
+            emailjs.init("yC_S2tk3iC7bUVyrs");
+        })();
+    </script>
+
+    <!-- Consentement cookies (RGPD) -->
+    <script src="js/cookies.js"></script>
+
+    <!-- Main JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

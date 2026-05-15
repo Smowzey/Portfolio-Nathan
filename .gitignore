@@ -1,0 +1,15 @@
+# Backend Python (non publié sur GitHub)
+main.py
+requirements.txt
+.env
+
+# Python compilé
+__pycache__/
+*.pyc
+*.pyo
+
+# Éditeur / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

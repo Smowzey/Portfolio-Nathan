@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse de site web par IA | Nathan Code</title>
+    <meta name="description" content="Faites analyser gratuitement votre site web par l'Intelligence Artificielle de Nathan Code. Obtenez un diagnostic UX et conversion immédiat.">
+    
+    <!-- Google Site Verification -->
+    <meta name="google-site-verification" content="U-JfkJKRaE6w7EcaBznw0P7YmtVjx_ysadhsGkfKK20" />
+
+    <!-- SEO & Open Graph -->
+    <link rel="canonical" href="https://nathan-code.be/Analyse.html">
+    <meta property="og:title" content="Analyse de site web par IA | Baudson Nathan">
+    <meta property="og:description" content="Testez la conversion de votre site web gratuitement grâce à notre outil d'analyse par IA.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nathan-code.be/Analyse.html">
+    <meta property="og:image" content="https://nathan-code.be/images/Logotittle.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon (Image de l'onglet) -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/logo.webp">
+
+    <!-- Fonts: Poppins for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.webp" alt="Logo Baudson Nathan" class="logo-img">
+            </a>
+            
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html#home" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#about" class="nav-link">À propos</a></li>
+                    <li><a href="index.html#works" class="nav-link">Réalisations</a></li>
+                    <li><a href="index.html#pricing" class="nav-link">Formules</a></li>
+                    <li><a href="index.html#inspirations" class="nav-link">Inspirations</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="Analyse.html" class="btn btn-primary btn-pulse" style="padding: 8px 18px; font-size: 0.9rem;"><i class="fa-solid fa-robot"></i> Audit IA Gratuit</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Basculer le thème">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="section" style="min-height: calc(100vh - 250px); display: flex; align-items: center; padding-top: 120px;">
+        <div class="container">
+            <h1 class="section-title">Analysez votre site web <span class="beta-badge">BETA</span></h1>
+            
+            <div class="contact-form" style="max-width: 600px; margin: 0 auto;">
+                <div id="form-container">
+                    <p style="text-align: center; color: var(--text-muted); font-size: 0.95rem; margin-bottom: 25px;"><i class="fa-solid fa-circle-info" style="color: var(--accent-primary); margin-right: 5px;"></i> Cet audit IA gratuit est limité à <strong>une seule analyse</strong> par personne.</p>
+                    <form id="scan-form">
+                        <div class="form-group"><input type="url" id="scan-url" name="url" placeholder="URL du site à analyser (ex: https://...)" required></div>
+                        <div class="form-group"><input type="email" id="scan-email" name="email" placeholder="Votre adresse email" required></div>
+                        <label class="check-item consent">
+                            <input type="checkbox" name="consent" value="oui" required>
+                            <span>J'accepte que mon e-mail soit utilisé pour recevoir le résultat et être recontacté, conformément à la <a href="confidentialite.html" target="_blank">politique de confidentialité</a>. <span class="required">*</span></span>
+                        </label>
+                        <button type="submit" class="btn btn-primary w-100">Lancer l'analyse</button>
+                        <p style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 15px; margin-bottom: 0;">⚠️ L'intelligence artificielle peut parfois se tromper ou être imprécise. Cet audit est fourni à titre indicatif.</p>
+                    </form>
+                </div>
+                
+                <div id="already-analyzed-msg" style="display: none; text-align: center; padding: 40px 0;">
+                    <i class="fa-solid fa-lock" style="font-size: 3rem; color: var(--accent-primary); margin-bottom: 20px;"></i>
+                    <h3 style="margin-bottom: 15px;">Analyse déjà effectuée</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 25px;">Vous avez déjà utilisé votre analyse gratuite. N'hésitez pas à me contacter pour aller plus loin !</p>
+                    <a href="index.html#contact" class="btn btn-primary w-100">Prendre RDV avec un expert</a>
+                </div>
+
+                <div id="loading-container" style="display: none; text-align: center; padding: 40px 0;">
+                    <div class="spinner" style="margin: 0 auto 20px;"></div>
+                    <p style="color: var(--text-muted);">Analyse en cours, veuillez patienter...</p>
+                </div>
+                
+                <div id="result-container" class="reveal" style="display: none; text-align: center;">
+                    <h3 id="result-verdict" style="font-size: 2rem; color: var(--accent-primary); margin-bottom: 15px;"></h3>
+                    <p id="result-diagnostic" style="color: var(--text-muted); margin-bottom: 30px;"></p>
+                    <a href="index.html#contact" class="btn btn-primary w-100" style="margin-bottom: 15px;">Prendre RDV avec un expert</a>
+                    <button type="button" id="reset-btn" class="btn btn-outline w-100">Nouvelle analyse</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="container footer-content">
+            <div class="footer-col footer-brand">
+                <img src="images/Nathan.code.webp" alt="Logo Baudson Nathan" class="footer-logo-img">
+                <p>Développeur Web passionné par la création digitale.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/smowzey/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/Smowzey" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.facebook.com/NathanBaudson.code" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <div class="footer-links">
+                    <a href="index.html#home">Accueil</a>
+                    <a href="index.html#about">À propos</a>
+                    <a href="index.html#works">Réalisations</a>
+                    <a href="Analyse.html">Analyse</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Légal</h4>
+                <div class="footer-links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Confidentialité</a>
+                    <a href="cookies.html">Cookies</a>
+                    <a href="cgv.html">CGV</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Nathan Code. Tous droits réservés. — <a href="#" onclick="openCookieSettings();return false;" style="color:inherit;">Gérer les cookies</a></p>
+        </div>
+    </footer>
+
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("yC_S2tk3iC7bUVyrs");
+        })();
+    </script>
+
+    <!-- Consentement cookies (RGPD) -->
+    <script src="js/cookies.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
