@@ -521,8 +521,16 @@ h1, h2, h3, h4, h5, h6 {
     100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
 }
 
+.about-image-wrapper picture {
+    display: block;
+    width: 100%;
+}
+
 .about-image {
     width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
     border-radius: 20px;
     display: block;
 }
