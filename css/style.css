@@ -287,17 +287,6 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.logo-initials {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--text-main);
-    text-decoration: none;
-    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 .logo-img {
     height: 40px;
     width: auto;
@@ -584,7 +573,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--bg-main);
 }
 
-.portfolio-grid, .inspirations-grid {
+.portfolio-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
@@ -1580,20 +1569,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
 }
 
-.legal-back {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 30px;
-    color: var(--accent-primary);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.legal-back:hover {
-    text-decoration: underline;
-}
-
 @media (max-width: 767px) {
     .legal-content { padding: 30px 22px; }
     .legal-page { padding: 110px 0 70px; }
@@ -1782,7 +1757,6 @@ h1, h2, h3, h4, h5, h6 {
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
 
 /* ==========================================================================
    MEDIA QUERIES
@@ -1812,9 +1786,9 @@ h1, h2, h3, h4, h5, h6 {
     .pricing-card.popular:hover { transform: scale(1.08); }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .hamburger { display: block; }
-    
+
     #nav-menu {
         position: fixed;
         top: 0; right: -100%;
@@ -1826,25 +1800,27 @@ h1, h2, h3, h4, h5, h6 {
         transition: right 0.4s ease;
         z-index: -1;
     }
-    
+
     #nav-menu.active { right: 0; }
-    
+
     .nav-links {
         flex-direction: column;
         text-align: center;
         gap: 40px;
     }
-    
+
     .nav-link { font-size: 1.5rem; }
-    
+
     .hamburger.active .bar:nth-child(2) { opacity: 0; }
     .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-    
+}
+
+@media (max-width: 767px) {
     .hero-name { font-size: 3rem; }
     .hero-title { font-size: 1.5rem; }
     .hero-buttons { flex-direction: column; width: 100%; }
-    
+
     .section { padding: 70px 0; }
 }
 
