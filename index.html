@@ -55,16 +55,27 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="apple-touch-icon" href="images/logo.webp">
 
-    <!-- Fonts: Poppins for Headings, Inter for Body -->
+    <!-- Preconnect aux CDN critiques (perf mobile) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Main CSS -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <!-- Preload du logo (LCP candidate sur mobile) -->
+    <link rel="preload" as="image" href="images/logo.webp" fetchpriority="high">
+
+    <!-- Main CSS (bloquant — au-dessus de la ligne de flottaison) -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fonts: chargement non-bloquant -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700;800&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Poppins:wght@500;600;700;800&display=swap"></noscript>
+
+    <!-- Font Awesome : non-bloquant -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- Google Tag Manager : chargé uniquement après consentement (voir js/cookies.js) -->
 </head>
 <body>
@@ -81,7 +92,7 @@
     <header id="navbar">
         <div class="container nav-container">
             <a href="#home" class="logo">
-                <img src="images/logo.webp" alt="Logo Baudson Nathan" class="logo-img">
+                <img src="images/logo.webp" alt="Logo Baudson Nathan" class="logo-img" width="160" height="40" fetchpriority="high" decoding="async">
             </a>
             
             <nav id="nav-menu">
@@ -140,7 +151,7 @@
             <div class="about-grid">
                 <div class="about-image-wrapper reveal">
                     <div class="image-border-anim"></div>
-                    <img src="images/profil.webp" alt="Baudson Nathan" class="about-image" loading="lazy">
+                    <img src="images/profil.webp" alt="Baudson Nathan" class="about-image" loading="lazy" decoding="async" width="500" height="500">
                 </div>
                 <div class="about-text reveal delay-1">
                     <h3>Qui suis-je ?</h3>
@@ -519,7 +530,7 @@
     <footer id="footer">
         <div class="container footer-content">
             <div class="footer-col footer-brand">
-                <img src="images/Nathan.code.webp" alt="Logo Baudson Nathan" class="footer-logo-img">
+                <img src="images/Nathan.code.webp" alt="Logo Baudson Nathan" class="footer-logo-img" loading="lazy" decoding="async" width="180" height="60">
                 <p>Développeur Web passionné par la création digitale.</p>
                 <div class="footer-socials">
                     <a href="https://www.instagram.com/smowzey/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -556,19 +567,37 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
+    <!-- EmailJS SDK : chargé à la première interaction du formulaire (perf mobile) -->
+    <script>
         (function(){
-            // Remplacez par votre Clé Publique (Public Key) EmailJS
-            emailjs.init("yC_S2tk3iC7bUVyrs");
+            var loaded = false;
+            function loadEmailJS(){
+                if (loaded) return;
+                loaded = true;
+                var s = document.createElement('script');
+                s.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+                s.onload = function(){ if (window.emailjs) emailjs.init("yC_S2tk3iC7bUVyrs"); };
+                document.head.appendChild(s);
+            }
+            var form = document.getElementById('contact-form');
+            if (form){
+                ['focusin','pointerdown','touchstart'].forEach(function(ev){
+                    form.addEventListener(ev, loadEmailJS, { once: true, passive: true });
+                });
+            }
+            // Fallback : charge après idle si jamais l'utilisateur scrolle jusqu'au form
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadEmailJS, { timeout: 8000 });
+            } else {
+                setTimeout(loadEmailJS, 6000);
+            }
         })();
     </script>
 
     <!-- Consentement cookies (RGPD) -->
-    <script src="js/cookies.js"></script>
+    <script src="js/cookies.js" defer></script>
 
     <!-- Main JS -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

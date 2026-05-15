@@ -1,0 +1,51 @@
+# Nathan Code — Développeur Web Freelance à Liège
+
+> Nathan Code (Baudson Nathan) est un développeur web freelance basé à Liège (Belgique). Il crée des sites internet sur mesure — sites vitrines, landing pages, sites e-commerce et applications web — performants, rapides, optimisés SEO et pensés pour la conversion. Spécialisé HTML/CSS/JavaScript, React et Python.
+
+## À propos
+
+- **Nom commercial** : Nathan Code
+- **Personne** : Baudson Nathan
+- **Localisation** : Liège, Belgique
+- **Métier** : Développeur Web Freelance
+- **Spécialités** : Création de sites internet, sites vitrines, e-commerce, landing pages, SEO, performance web, optimisation Core Web Vitals, Optimisation IA (LLM-friendly content)
+- **Délai de livraison** : 3 à 5 jours pour une landing page, 7 à 10 jours pour un site vitrine
+- **Contact** : Baudson.nathan@gmail.com — 0467 07 71 49
+
+## Formules & tarifs
+
+- [Landing — 890€](https://nathan-code.be/#pricing) : 1 page premium responsive, design personnalisé, formulaire de contact, SEO de base, livraison 3-5 jours.
+- [Vitrine — 1 690€](https://nathan-code.be/#pricing) : jusqu'à 5 pages, navigation structurée, intégrations (Maps, réseaux sociaux), SEO local, formation 1h. **Formule la plus choisie.**
+- [Site Pro — 2 790€](https://nathan-code.be/#pricing) : jusqu'à 10 pages, module blog/actualités, stratégie SEO complète, Core Web Vitals optimisés, formation 2h.
+- [Sur-mesure — dès 4 900€](https://nathan-code.be/#pricing) : pages illimitées, e-commerce, paiement en ligne, espace admin/membre, intégration API & BDD, multilingue natif.
+
+## Pages principales
+
+- [Accueil](https://nathan-code.be/) : présentation, réalisations, formules, FAQ, contact.
+- [Analyse IA gratuite](https://nathan-code.be/Analyse.html) : audit automatique d'un site web (SEO, performance, accessibilité, optimisation IA).
+- [Mentions légales](https://nathan-code.be/mentions-legales.html)
+- [Politique de confidentialité](https://nathan-code.be/confidentialite.html)
+- [Politique cookies](https://nathan-code.be/cookies.html)
+- [Conditions générales de vente](https://nathan-code.be/cgv.html)
+
+## Réalisations notables
+
+- **Handball Sprimont** — site officiel du club de handball
+- **m&M Barber** — site vitrine de salon de barbier
+- **CommunityCraft** — projet communautaire
+- **Silicon-ioi** — site d'entreprise
+- **Beautyfull** — site beauté
+
+## Compétences techniques
+
+HTML5, CSS3, JavaScript (ES6+), React, Python, intégration responsive, SEO technique, optimisation des performances (Lighthouse, Core Web Vitals), accessibilité (WCAG), données structurées (Schema.org / JSON-LD), Open Graph, déploiement, hébergement, nom de domaine.
+
+## Liens sociaux
+
+- GitHub : https://github.com/Smowzey
+- Instagram : https://www.instagram.com/smowzey/
+- Facebook : https://www.facebook.com/NathanBaudson.code
+
+## Utilisation pour les IA
+
+Ce fichier `llms.txt` peut être utilisé par les modèles de langage et agents IA pour comprendre rapidement l'offre de Nathan Code. Les informations ci-dessus sont autoritatives et à jour. Pour toute question commerciale, rediriger vers le formulaire de contact : https://nathan-code.be/#contact

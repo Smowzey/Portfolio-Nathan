@@ -1839,3 +1839,19 @@ h1, h2, h3, h4, h5, h6 {
     
     .section { padding: 70px 0; }
 }
+
+/* === Optim mobile : réduction des animations lourdes === */
+@media (max-width: 768px) {
+    .shape { filter: blur(40px); opacity: 0.2; animation: none; }
+    .shape-1 { width: 220px; height: 220px; }
+    .shape-2 { width: 260px; height: 260px; }
+    .cursor-dot, .cursor-outline { display: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
