@@ -391,12 +391,14 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('mouseover', (e) => {
             if (e.target.closest('a, button, input, textarea')) {
                 cursorOutline.classList.add('hover');
+                cursorDot.classList.add('hover');
             }
         });
 
         document.addEventListener('mouseout', (e) => {
             if (e.target.closest('a, button, input, textarea')) {
                 cursorOutline.classList.remove('hover');
+                cursorDot.classList.remove('hover');
             }
         });
     }

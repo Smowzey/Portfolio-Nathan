@@ -92,32 +92,41 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
     z-index: 9999;
     pointer-events: none;
-    opacity: 0; /* Caché au début */
+    opacity: 0;
 }
 
+/* Flèche style macOS — pointe alignée sur la position réelle du curseur */
 .cursor-dot {
-    width: 8px;
-    height: 8px;
+    width: 22px;
+    height: 22px;
+    transform: translate(-2px, -2px);
     background-color: var(--accent-primary);
-    transition: opacity 0.3s ease;
+    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M3 2 L3 19 L8 14.5 L11 21 L13.5 20 L10.5 13.5 L17 13 Z' fill='black' stroke='white' stroke-width='1.2' stroke-linejoin='round'/></svg>") center / contain no-repeat;
+            mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M3 2 L3 19 L8 14.5 L11 21 L13.5 20 L10.5 13.5 L17 13 Z' fill='black' stroke='white' stroke-width='1.2' stroke-linejoin='round'/></svg>") center / contain no-repeat;
+    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
+    transition: opacity 0.3s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Halo doux qui suit la flèche, façon highlight Apple */
 .cursor-outline {
-    width: 40px;
-    height: 40px;
-    border: 2px solid var(--accent-primary);
-    transition: opacity 0.3s ease, width 0.2s ease, height 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+    width: 36px;
+    height: 36px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: var(--accent-primary-transparent);
+    transition: opacity 0.3s ease, width 0.25s ease, height 0.25s ease, background-color 0.2s ease;
+}
+
+.cursor-dot.hover {
+    transform: translate(-2px, -2px) scale(0.85);
 }
 
 .cursor-outline.hover {
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
     background-color: var(--accent-primary-transparent);
-    border-color: transparent;
 }
 
 @media (pointer: coarse) {
