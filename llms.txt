@@ -30,9 +30,8 @@
 
 ## Réalisations notables
 
+- **Silicon-ioi** — site vitrine ([silicon-ioi.online/fr](https://silicon-ioi.online/fr))
 - **Handball Sprimont** — site officiel du club de handball
-- **m&M Barber** — site vitrine de salon de barbier
-- **CommunityCraft** — projet communautaire
 - **Beautyfull** — site beauté
 
 ## Compétences techniques

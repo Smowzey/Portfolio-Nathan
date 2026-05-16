@@ -172,13 +172,13 @@ document.addEventListener('DOMContentLoaded', () => {
        ========================================================================== */
     const projects = [
         {
-            title: "M&M Barber",
+            title: "Silicon-ioi",
             category: "Site Web",
-            img: "images/mMBarber.webp",
-            desc: "Création d'un site vitrine sur mesure pour un salon de coiffure. L'objectif : numériser la prise de rendez-vous et refléter l'élégance du lieu pour booster les réservations.",
+            img: "images/silicon-ioi.webp",
+            desc: "Site vitrine pour Silicon-ioi : présentation des services, identité visuelle moderne et parcours clair vers la prise de contact. Optimisé performance et SEO.",
             tags: ["HTML", "CSS", "JS"],
-            link: "https://smowzey.github.io/MMBarber-site/",
-            github: "https://github.com/Smowzey/MMBarber-site"
+            link: "https://silicon-ioi.online/fr",
+            github: ""
         },
         {
             title: "HC Sprimont",
@@ -188,15 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["HTML", "CSS", "JS"],
             link: "https://smowzey.github.io/HC-Sprimont-Site/",
             github: "https://github.com/Smowzey/HC-Sprimont-Site"
-        },
-        {
-            title: "Launcher Minecraft",
-            category: "Logiciel",
-            img: "images/communitycraft.webp",
-            desc: "Développement d'un logiciel automatisé en Python pour gérer l'installation de mods. Solution adoptée pour réduire drastiquement les erreurs techniques de la communauté.",
-            tags: ["Python", "Minecraft", "Logiciel"],
-            link: "https://github.com/Smowzey/Community-Craft-V3/releases/tag/v1.0.0",
-            github: "https://github.com/Smowzey/Community-Craft-V3"
         }
     ];
 
@@ -217,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${project.img}" alt="${project.title}" class="card-img" loading="lazy" width="600" height="337">
                     <div class="card-overlay">
                         <a href="${project.link}" class="btn-icon" target="_blank" aria-label="Voir le site"><i class="fa-solid fa-link"></i></a>
-                        <a href="${project.github}" class="btn-icon" target="_blank" aria-label="Voir le code"><i class="fa-brands fa-github"></i></a>
+                        ${project.github ? `<a href="${project.github}" class="btn-icon" target="_blank" aria-label="Voir le code"><i class="fa-brands fa-github"></i></a>` : ''}
                     </div>
                 </div>
                 <div class="card-content">
