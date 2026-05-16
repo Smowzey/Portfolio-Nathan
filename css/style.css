@@ -97,36 +97,40 @@ body {
     opacity: 0;
 }
 
-/* Flèche style macOS — pointe alignée sur la position réelle du curseur */
+/* Flèche macOS authentique — silhouette fine, inclinée, contour blanc 1.5px */
 .cursor-dot {
-    width: 22px;
-    height: 22px;
-    transform: translate(-2px, -2px);
-    background-color: var(--accent-primary);
-    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M3 2 L3 19 L8 14.5 L11 21 L13.5 20 L10.5 13.5 L17 13 Z' fill='black' stroke='white' stroke-width='1.2' stroke-linejoin='round'/></svg>") center / contain no-repeat;
-            mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M3 2 L3 19 L8 14.5 L11 21 L13.5 20 L10.5 13.5 L17 13 Z' fill='black' stroke='white' stroke-width='1.2' stroke-linejoin='round'/></svg>") center / contain no-repeat;
-    filter: drop-shadow(0 1px 2px rgba(0,0,0,0.25));
-    transition: opacity 0.3s ease, transform 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 20px;
+    height: 20px;
+    transform: translate(-4px, -2px);
+    transform-origin: 4px 2px;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><defs><filter id='s' x='-50%' y='-50%' width='200%' height='200%'><feDropShadow dx='0' dy='1' stdDeviation='1' flood-color='black' flood-opacity='0.35'/></filter></defs><path d='M5.5 3.5 L5.5 22.5 L10.2 17.8 L13 24.5 L15.8 23.2 L13 16.5 L19.5 16 Z' fill='%231A535C' stroke='white' stroke-width='1.5' stroke-linejoin='round' filter='url(%23s)'/></svg>");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 0.3s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Halo doux qui suit la flèche, façon highlight Apple */
+/* Variante thème sombre — accent mint */
+body.dark-theme .cursor-dot {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><defs><filter id='s' x='-50%' y='-50%' width='200%' height='200%'><feDropShadow dx='0' dy='1' stdDeviation='1.2' flood-color='black' flood-opacity='0.5'/></filter></defs><path d='M5.5 3.5 L5.5 22.5 L10.2 17.8 L13 24.5 L15.8 23.2 L13 16.5 L19.5 16 Z' fill='%23D4FFD7' stroke='%23123b42' stroke-width='1.5' stroke-linejoin='round' filter='url(%23s)'/></svg>");
+}
+
+/* Lueur d'accent discrète, ne s'affiche qu'au hover */
 .cursor-outline {
-    width: 36px;
-    height: 36px;
+    width: 0;
+    height: 0;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: var(--accent-primary-transparent);
-    transition: opacity 0.3s ease, width 0.25s ease, height 0.25s ease, background-color 0.2s ease;
+    background: radial-gradient(circle, var(--accent-primary-transparent) 0%, transparent 70%);
+    transition: opacity 0.25s ease, width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cursor-dot.hover {
-    transform: translate(-2px, -2px) scale(0.85);
+    transform: translate(-4px, -2px) scale(1.15);
 }
 
 .cursor-outline.hover {
-    width: 54px;
-    height: 54px;
-    background-color: var(--accent-primary-transparent);
+    width: 48px;
+    height: 48px;
 }
 
 @media (pointer: coarse) {
