@@ -33,7 +33,6 @@
 - **Handball Sprimont** — site officiel du club de handball
 - **m&M Barber** — site vitrine de salon de barbier
 - **CommunityCraft** — projet communautaire
-- **Silicon-ioi** — site d'entreprise
 - **Beautyfull** — site beauté
 
 ## Compétences techniques
