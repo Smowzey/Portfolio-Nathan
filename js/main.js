@@ -197,6 +197,15 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["HTML", "CSS", "JS", "Motion"],
             link: "https://smowzey.github.io/Atelier-Min-ral./",
             github: ""
+        },
+        {
+            title: "Studio Ciseau — Concept Éditorial",
+            category: "Site Web",
+            img: "images/studio-ciseau.webp",
+            desc: "Une interface lumineuse et minimaliste, directement inspirée des magazines de haute couture. Conçue pour mettre en valeur l'expertise visuelle des salons de coiffure premium. Note : vitrine technologique fictive réalisée pour illustrer mes compétences en design d'interface clair (Light Mode) — il ne s'agit pas d'un site client actif.",
+            tags: ["HTML", "CSS", "JS", "Light Mode"],
+            link: "https://smowzey.github.io/Studio-Ciseau/",
+            github: ""
         }
     ];
 
