@@ -1839,3 +1839,13 @@ h1, h2, h3, h4, h5, h6 {
         transition-duration: 0.01ms !important;
     }
 }
+
+.works-cta {
+    margin-top: 50px;
+    text-align: center;
+}
+.works-cta p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 18px;
+}
