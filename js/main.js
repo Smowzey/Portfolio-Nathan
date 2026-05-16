@@ -367,25 +367,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let cursorVisible = false;
 
     if (cursorDot && cursorOutline) {
+        let mouseX = 0, mouseY = 0;
+        let outlineX = 0, outlineY = 0;
+
         window.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
             if (!cursorVisible) {
                 cursorDot.style.opacity = 1;
                 cursorOutline.style.opacity = 1;
                 cursorVisible = true;
             }
-            
-            const posX = e.clientX;
-            const posY = e.clientY;
 
-            cursorDot.style.left = `${posX}px`;
-            cursorDot.style.top = `${posY}px`;
-
-            // Animation fluide (le contour suit avec un léger retard)
-            cursorOutline.animate({
-                left: `${posX}px`,
-                top: `${posY}px`
-            }, { duration: 500, fill: "forwards" });
+            cursorDot.style.left = `${mouseX}px`;
+            cursorDot.style.top = `${mouseY}px`;
         });
+
+        // Lerp fluide pour l'anneau extérieur
+        const tick = () => {
+            outlineX += (mouseX - outlineX) * 0.18;
+            outlineY += (mouseY - outlineY) * 0.18;
+            cursorOutline.style.left = `${outlineX}px`;
+            cursorOutline.style.top = `${outlineY}px`;
+            requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
 
         // Effet au survol des éléments cliquables avec délégation d'événements
         document.addEventListener('mouseover', (e) => {

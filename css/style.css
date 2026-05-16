@@ -92,45 +92,41 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    transform: translate3d(-50%, -50%, 0);
+    border-radius: 50%;
     z-index: 9999;
     pointer-events: none;
     opacity: 0;
+    will-change: transform, width, height;
+    mix-blend-mode: difference;
 }
 
-/* Flèche macOS authentique — silhouette fine, inclinée, contour blanc 1.5px */
+/* Point central — précis, suit la souris à 1:1 */
 .cursor-dot {
-    width: 20px;
-    height: 20px;
-    transform: translate(-4px, -2px);
-    transform-origin: 4px 2px;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><defs><filter id='s' x='-50%' y='-50%' width='200%' height='200%'><feDropShadow dx='0' dy='1' stdDeviation='1' flood-color='black' flood-opacity='0.35'/></filter></defs><path d='M5.5 3.5 L5.5 22.5 L10.2 17.8 L13 24.5 L15.8 23.2 L13 16.5 L19.5 16 Z' fill='%231A535C' stroke='white' stroke-width='1.5' stroke-linejoin='round' filter='url(%23s)'/></svg>");
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: opacity 0.3s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 6px;
+    height: 6px;
+    background-color: #ffffff;
+    transition: opacity 0.3s ease, width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Variante thème sombre — accent mint */
-body.dark-theme .cursor-dot {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'><defs><filter id='s' x='-50%' y='-50%' width='200%' height='200%'><feDropShadow dx='0' dy='1' stdDeviation='1.2' flood-color='black' flood-opacity='0.5'/></filter></defs><path d='M5.5 3.5 L5.5 22.5 L10.2 17.8 L13 24.5 L15.8 23.2 L13 16.5 L19.5 16 Z' fill='%23D4FFD7' stroke='%23123b42' stroke-width='1.5' stroke-linejoin='round' filter='url(%23s)'/></svg>");
-}
-
-/* Lueur d'accent discrète, ne s'affiche qu'au hover */
+/* Anneau extérieur — suit avec un léger retard (lerp côté JS) */
 .cursor-outline {
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid #ffffff;
+    transition: opacity 0.3s ease, width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Au hover : le point disparaît, l'anneau grossit et se remplit légèrement */
+.cursor-dot.hover {
     width: 0;
     height: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--accent-primary-transparent) 0%, transparent 70%);
-    transition: opacity 0.25s ease, width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.cursor-dot.hover {
-    transform: translate(-4px, -2px) scale(1.15);
 }
 
 .cursor-outline.hover {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 @media (pointer: coarse) {
