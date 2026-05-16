@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Silicon-ioi",
             category: "Site Web",
             img: "images/silicon-ioi.webp",
-            desc: "Site vitrine pour Silicon-ioi : présentation des services, identité visuelle moderne et parcours clair vers la prise de contact. Optimisé performance et SEO.",
+            desc: "Améliorations de l'interface web réalisée lors de mon alternance chez Brainstorming.",
             tags: ["HTML", "CSS", "JS"],
             link: "https://silicon-ioi.online/fr",
             github: ""
