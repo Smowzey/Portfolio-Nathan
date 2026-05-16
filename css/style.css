@@ -98,14 +98,14 @@ body {
     pointer-events: none;
     opacity: 0;
     will-change: transform, width, height;
-    mix-blend-mode: difference;
 }
 
 /* Point central — précis, suit la souris à 1:1 */
 .cursor-dot {
     width: 6px;
     height: 6px;
-    background-color: #ffffff;
+    background-color: var(--accent-primary);
+    box-shadow: 0 0 12px var(--accent-primary-shadow);
     transition: opacity 0.3s ease, width 0.25s cubic-bezier(0.16, 1, 0.3, 1), height 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -113,11 +113,11 @@ body {
 .cursor-outline {
     width: 38px;
     height: 38px;
-    border: 1.5px solid #ffffff;
+    border: 1.5px solid var(--accent-primary);
     transition: opacity 0.3s ease, width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease;
 }
 
-/* Au hover : le point disparaît, l'anneau grossit et se remplit légèrement */
+/* Au hover : le point disparaît, l'anneau grossit et se teinte */
 .cursor-dot.hover {
     width: 0;
     height: 0;
@@ -126,7 +126,7 @@ body {
 .cursor-outline.hover {
     width: 56px;
     height: 56px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: var(--accent-primary-transparent);
 }
 
 @media (pointer: coarse) {
