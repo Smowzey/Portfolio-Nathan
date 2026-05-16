@@ -188,6 +188,15 @@ document.addEventListener('DOMContentLoaded', () => {
             tags: ["HTML", "CSS", "JS"],
             link: "https://smowzey.github.io/HC-Sprimont-Site/",
             github: "https://github.com/Smowzey/HC-Sprimont-Site"
+        },
+        {
+            title: "Atelier Minéral — Concept Créatif",
+            category: "Site Web",
+            img: "images/atelier-mineral.webp",
+            desc: "Une immersion digitale ultra-premium en Dark Mode conçue pour le secteur de la beauté et du bien-être de luxe. Note : vitrine technologique fictive réalisée pour illustrer mes compétences en motion design et UI/UX haut de gamme — il ne s'agit pas d'un site client actif.",
+            tags: ["HTML", "CSS", "JS", "Motion"],
+            link: "https://smowzey.github.io/Atelier-Min-ral./",
+            github: ""
         }
     ];
 
